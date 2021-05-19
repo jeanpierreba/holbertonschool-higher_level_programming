@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 
-"""Square class that defines attributes for a square object"""
+"""Square class that defines attributes and methods for a square object"""
 
 
 class Square:
 
-    """Square class that defines attributes for a square object"""
+    """Square class that defines attributes and methods for a square object"""
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize the data"""
         self.size = size
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
@@ -24,7 +24,8 @@ class Square:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
     @property
     def position(self):
@@ -47,8 +48,8 @@ class Square:
         return (self.__size ** 2)
 
     def my_print(self):
-        """Print in the stdout the square with the character '#'"""
-        if self.__size == 0:
+        """Print in the stdout the square with the character #"""
+        if self.size == 0:
             print()
         else:
             for i in range(self._position[1]):

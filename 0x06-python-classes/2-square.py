@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+
+"""Square class that defines attributes for a square object"""
+
+
 class Square:
-    """Square class that defines attributes for a square object"""
+
     def __init__(self, size=0):
         """Initialize the data"""
         if not isinstance(size, int):

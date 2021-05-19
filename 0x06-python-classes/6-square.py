@@ -4,10 +4,12 @@
 
 
 class Square:
+
     """Square class that defines attributes for a square object"""
+
     def __init__(self, size=0, position=(0, 0)):
         """Initialize the data"""
-        self.__size = size
+        self.size = size
         self.__position = position
 
     @property
@@ -18,11 +20,11 @@ class Square:
     @size.setter
     def size(self, value):
         """Sets a value to the size attribute"""
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
 
     @property
     def position(self):

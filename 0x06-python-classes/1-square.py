@@ -5,5 +5,5 @@ class Square:
     Instantiation with size (no type/value verification) """
 
     def __init__(self, size):
-        """Initializing the data"""
+        """ Initializing the data """
         self.__size = size

@@ -2,8 +2,10 @@
 
 """ Module with definition of the class Rectangle """
 
+
 class Rectangle:
-    """ Class Rectangle defined with width, height, area, perimeter, __str__ and __repr__"""
+    """ Class Rectangle defined with width
+    height, area, perimeter, __str__ and __repr__"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height

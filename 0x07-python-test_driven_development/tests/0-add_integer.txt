@@ -1,0 +1,57 @@
+=================================
+Doctest for add_integer function
+=================================
+
+``add_integer(a, b)`` Return the addition of a and b 
+that must be integers or raise an Error depending on 
+the case
+
+
+Import the function:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+tests for the function:
+
+    >>> add_integer(3, 5)
+    8
+
+    >>> add_integer(2, 4.2)
+    6
+
+    >>> add_integer(12)
+    110
+
+    >>> add_integer(20, -10)
+    10
+
+    >>> add_integer(-10, -10)
+    -20
+
+    >>> add_integer(3.0, 5.0)
+    8
+
+    >>> add_integer(1, "Hello")
+    Traceback (most recent call last):
+              ...
+    TypeError: b must be an integer
+
+    >>> add_integer('a', 4)
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+    >>> add_integer()
+    Traceback (most recent call last):
+              ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(float('nan'), float('nan'))
+    Traceback (most recent call last):
+              ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+              ...
+    OverflowError: cannot convert float infinity to integer

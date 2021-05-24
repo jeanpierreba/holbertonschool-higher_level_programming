@@ -1,0 +1,47 @@
+=====================================
+Doctest for text_indentation function
+=====================================
+
+``def text_indentation(text):`` Print the text with two new 
+lines every time it find '.' ':' or '?' characters
+
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+tests for the function:
+
+    >>> text_indentation("Good.Morning")
+    Good.
+    <BLANKLINE>
+    Morning
+
+    >>> text_indentation(":He Said")
+    :
+    <BLANKLINE>
+    He Said
+
+    >>> text_indentation("You ok?She said")
+    You ok?
+    <BLANKLINE>
+    She said
+
+    >>> text_indentation("...Not Sure")
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    Not Sure
+
+    >>> text_indentation(13)
+    Traceback (most recent call last):
+              ...
+    TypeError: text must be a string
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+              ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'

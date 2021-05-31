@@ -9,4 +9,4 @@ def read_file(filename=""):
 
     with open(filename) as my_file:
         read_file = my_file.read()
-        print(read_file)
+        print(read_file, end="")

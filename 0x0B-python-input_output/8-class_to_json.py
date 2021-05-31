@@ -6,4 +6,4 @@ simple data structure """
 
 def class_to_json(obj):
     """ Function that creates a dict description of obj """
-    return obj.__dic__
+    return obj.__dict__

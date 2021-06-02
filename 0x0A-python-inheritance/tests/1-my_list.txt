@@ -1,0 +1,40 @@
+=========================
+Doctest for MyList class
+=========================
+
+``MyList(list)`` is a class that inherits from list with
+a public method
+
+Import function:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Tests for function:
+
+    >>> my_list = MyList(6)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+
+    >>> my_list = MyList(6, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: list() takes at most 1 argument (2 given)
+
+    >>> my_list = MyList()
+
+    >>> type(my_list) == MyList
+    True
+
+    >>> type(my_list) == list
+    False
+
+    >>> my_list = MyList("hello")
+    
+    >>> my_list
+    ['h', 'e', 'l', 'l', 'o']
+
+    >>> my_list = MyList([3, 6, 2])
+
+    >>> my_list
+    [3, 6, 2]

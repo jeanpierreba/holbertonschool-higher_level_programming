@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
+""" Module that contains the Rectangle class that inherits from Base """
+
 from models.base import Base
 
 
 class Rectangle(Base):
+    """ Class that describes a rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)

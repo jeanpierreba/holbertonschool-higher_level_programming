@@ -29,7 +29,7 @@ class Base:
     def save_to_file(cls, list_objs):
         filename = cls.__name__ + ".json"
         if list_objs is None or list_objs == []:
-            js_str = []
+            js_str = "[]"
         else:
             js_str = cls.to_json_string([i.to_dictionary() for i in list_objs])
         with open(filename, 'w') as my_file:

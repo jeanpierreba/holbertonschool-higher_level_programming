@@ -12,7 +12,7 @@ if __name__ == "__main__":
     else:
         data = {'q': ""}
     try:
-        response = requests.posts("http://0.0.0.0:5000/search_user", data)
+        response = requests.post("http://0.0.0.0:5000/search_user", data)
         to_json = response.json()
         if not to_json:
             print("No result")

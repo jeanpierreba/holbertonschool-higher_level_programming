@@ -1,11 +1,12 @@
 #!/usr/bin/node
 
 const argv = process.argv;
+const id = "18";
 const request = require('request');
 
 request(argv[2], function (error, response, body) {
   if (error) {
-    console.error(error);
+    console.error("error:",error);
   } else {
     const json_body = JSON.parse(body);
     let count = 0;
